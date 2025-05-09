@@ -19,7 +19,7 @@ A Python script that monitors the availability of network services and sends not
 
 ## Configuration
 
-1. Edit the `SERVICES` dictionary in `downDetector.py` to add or modify the services you want to monitor:
+1. Edit the `SERVICES` dictionary in `DownDetector.py` to add or modify the services you want to monitor:
 ```python
 SERVICES = {
     "example.com": {"port": 80},
@@ -27,7 +27,7 @@ SERVICES = {
 }
 ```
 
-2. Configure the monitoring parameters at the top of `downDetector.py`:
+2. Configure the monitoring parameters at the top of `DownDetector.py`:
 ```python
 # Configuration constants
 SLACK_WEBHOOK_URL = "your-slack-webhook-url"
@@ -49,7 +49,7 @@ These parameters can be adjusted based on your needs:
 2. Configure the services and Slack webhook URL as described above
 3. Run the script:
 ```bash
-python downDetector.py
+python DownDetector.py
 ```
 
 The script will:
@@ -78,7 +78,7 @@ After=network.target
 Type=simple
 User=your_username
 WorkingDirectory=/path/to/script/directory
-ExecStart=/usr/bin/python3 /path/to/script/directory/downDetector.py
+ExecStart=/usr/bin/python3 /path/to/script/directory/DownDetector.py
 Restart=always
 RestartSec=10
 
